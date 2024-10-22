@@ -23,6 +23,7 @@ def chat(bot: object) -> None:
             content=promt,
             stream=True,
             generation_config=gemini.types.GenerationConfig(
+                candidate_count=1,
                 temperature=2.0,  # Controla la "creatividad" de la respuesta. 2 es el máximo.
             ),
         )
